@@ -204,7 +204,6 @@ process phantompeakqualtools {
 * STEP 6 DeepTools              *
 ********************************/
 process deeptools {
-
 	module 'deeptools'
 
 	cpus 4
@@ -265,6 +264,7 @@ process deeptools {
 }
 
 process macs {
+    tag "${chip_sample_id}"
     module 'macs'
     module 'samtools'
     module 'ceas'
@@ -316,6 +316,8 @@ process macs {
 }
 
 process sicer {
+    tag "$chip_sample_id"
+
     module 'sicer'
     module 'bedtools'
     module 'ceas'
@@ -352,7 +354,8 @@ process sicer {
     }
 }
 
-process memechip {
+process memechip { tag "$narrowpeak"
+
     module 'meme'
     module 'bedtools'
     
