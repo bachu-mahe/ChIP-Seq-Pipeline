@@ -24,6 +24,7 @@ $ nextflow main.nf \
 *******************/
 params.genome = 'hg19'
 params.index = params.genomes[ params.genome ].bwa
+params.fasta = params.genomes[ params.genome ].fasta
 params.name = 'ChIP-Seq'
 params.reads = "example/*.fastq"
 params.macsconfig = 'example/macssetup.config'
@@ -33,9 +34,11 @@ params.publish_mode = "symlink" //"copy"
 
 //Basic Parameter Checking
 index = file( params.index )
+genome_fasta = file( params.fasta )
 macsconfig = file( params.macsconfig )
 
 if ( !index.exists() ) exit 1, "Missing BWA Index file: $index"
+if ( !geome_fasta.exists() ) exit 1, "Missing Whole Genome FASTA file: $genome_fasta"
 if ( !macsconfig.exists() ) exit 1, "Missing macs config file: $macsconfig"
 
 (macs_in, sicer_in) = Channel 
@@ -377,7 +380,7 @@ process memechip { tag "$narrowpeak"
 
     """
     sort -k6,6g ${narrowpeak} | head -n 1000 > ${sorted_peak}
-    bedtools getfasta -fi $genome_fa -bed $sorted_peak -fo $sorted_fa
+    bedtools getfasta -fi $genome_fasta -bed $sorted_peak -fo $sorted_fa
     meme-chip -oc $result_dir -dna -meme-p $cpus $sorted_fa
     tar czf ${result_dir}.tar.gz $result_dir
     """

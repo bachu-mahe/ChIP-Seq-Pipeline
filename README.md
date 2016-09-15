@@ -1,5 +1,8 @@
 CCBR ChIP-Seq Pipeline
 
+
+
+
 We implemented this pipeline using Nextflow.
 
 Current implementation includes following tools.
