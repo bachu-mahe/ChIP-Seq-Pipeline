@@ -7,7 +7,7 @@
 ```bash
 curl -fsSL get.nextflow.io | bash
 ```
-For details, visit https://www.nextflow.io/
+	For details, visit https://www.nextflow.io/
 
 2. clone this git repository
 ```bash
