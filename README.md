@@ -34,7 +34,7 @@ If you experience an error message related to missing file(s), this might be the
 * Currently, the pipeline fully supports hg19, mm10 and partially supports GRCh38 and GRCm38. Contact us for other genomes. 
 
 
-###Additional options can be used: 
+###Additional options 
 * -resume                         --> to resume the previous failed run
 * -profile 'local'                --> for running tools "locally" not thourgh high performance computer queueing mechanisms.
 * -with-timeline 'timeline.html'  --> record the run time of each process.
