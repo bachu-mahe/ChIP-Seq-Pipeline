@@ -368,10 +368,14 @@ process memechip {
     file '*.tar.gz'
 
     script:
+    sorted_peak = "${narrowpeak}.sorted"
+    sorted_fa = "${narrowpeak}.sorted.fa"
+    result_dir = "${narrowpeak}.memechip"
 
     """
-    
-    bedToFasta 
-    meme-chip -oc 
+    sort -k6,6g ${narrowpeak} | head -n 1000 > ${sorted_peak}
+    bedtools getfasta -fi $genome_fa -bed $sorted_peak -fo $sorted_fa
+    meme-chip -oc $result_dir -dna -meme-p $cpus $sorted_fa
+    tar czf ${result_dir}.tar.gz $result_dir
     """
 }
