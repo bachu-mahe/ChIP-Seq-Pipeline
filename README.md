@@ -3,6 +3,7 @@
 ##Installation
 
 1. install nextflow
+	
 	curl -fsSL get.nextflow.io | bash
 
 	For details, visit https://www.nextflow.io/
