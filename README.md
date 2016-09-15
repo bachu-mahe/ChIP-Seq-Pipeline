@@ -29,7 +29,7 @@ If you experience an error message related to missing file(s), this might be the
 
 * Config file is designed to work at our NIH biowulf2 HPC. If you plan to use on helix, add -profile 'local' option at the end of command line arguments. If you plan to use outside NIH, you need to edit the "genome" section according to your paths information.
 
-* macs.config is a config file for MACS2 to find peaks. ChIP sample and control (input or IgG) with their label concatenated by comma form a line, e.g. <chip_sample_id>,<control_id>,<sample_name>. <chip_sample_id> or <control_id> are expected the basename of the FASTQ files wihtout the trailing ".fastq" or ".fastq.gz".
+* macs.config is a config file for MACS2 to find peaks. ChIP sample and control (input or IgG) with their label concatenated by comma form a line, e.g. chip_sample_id,control_id,sample_name. chip_sample_id or control_id are expected the basename of the FASTQ files wihtout the trailing ".fastq" or ".fastq.gz".
 
 
 ###Additional options can be used: 
