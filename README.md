@@ -31,6 +31,8 @@ If you experience an error message related to missing file(s), this might be the
 
 * macs.config is a config file for MACS2 to find peaks. ChIP sample and control (input or IgG) with their label concatenated by comma form a line, e.g. chip_sample_id,control_id,sample_name. chip_sample_id or control_id are expected the basename of the FASTQ files wihtout the trailing ".fastq" or ".fastq.gz".
 
+* Currently, the pipeline fully supports hg19, mm10 and partially supports GRCh38 and GRCm38. Contact us for other genomes. 
+
 
 ###Additional options can be used: 
 * -resume                         --> to resume the previous failed run
