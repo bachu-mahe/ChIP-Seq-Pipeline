@@ -1,4 +1,4 @@
-CCBR ChIP-Seq Pipeline
+# CCBR ChIP-Seq Pipeline
 
 #Installation
 
