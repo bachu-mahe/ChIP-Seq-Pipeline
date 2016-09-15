@@ -1,0 +1,4 @@
+4b14c518-26cb-4322-addb-0dbedf1035c6	nextflow run nextflow-io/rnatoy
+ed138be3-aba4-415e-9147-a27e5ec93bba	nextflow run rnatoy/main.nf
+6191cdac-0854-44b5-87e9-de7bcb11fc6a	nextflow run rnatoy/main.nf
+e3587de3-e7d0-4857-9645-44dddb891221	nextflow run rnatoy/main.nf

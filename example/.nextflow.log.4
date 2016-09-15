@@ -1,0 +1,199 @@
+Aug-17 12:53:57.826 [main] DEBUG nextflow.cli.Launcher - $> /home/kimb8/projects/bin/nextflow run nextflow-io/rnatoy
+Aug-17 12:53:58.026 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.20.1
+Aug-17 12:54:10.272 [main] INFO  nextflow.cli.CmdRun - Pulling nextflow-io/rnatoy ...
+Aug-17 12:54:10.288 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nextflow-io/rnatoy/contents/nextflow.config
+Aug-17 12:54:23.977 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nextflow-io/rnatoy/contents/main.nf
+Aug-17 12:54:24.092 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nextflow-io/rnatoy
+Aug-17 12:54:24.154 [main] DEBUG nextflow.scm.AssetManager - Pulling nextflow-io/rnatoy -- Using remote clone url: https://github.com/nextflow-io/rnatoy.git
+Aug-17 12:54:35.193 [main] INFO  nextflow.cli.CmdRun -  downloaded from https://github.com/nextflow-io/rnatoy.git
+Aug-17 12:54:35.437 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/.git/config; branch: master; remote: origin; url: https://github.com/nextflow-io/rnatoy.git
+Aug-17 12:54:35.438 [main] INFO  nextflow.cli.CmdRun - Launching 'nextflow-io/rnatoy' - revision: b9db7c310d [master]
+Aug-17 12:54:39.303 [main] DEBUG nextflow.config.ConfigBuilder - Found config home: /home/kimb8/.nextflow/config
+Aug-17 12:54:39.304 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/nextflow.config
+Aug-17 12:54:39.307 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kimb8/.nextflow/config
+Aug-17 12:54:39.308 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/nextflow.config
+Aug-17 12:54:39.366 [main] DEBUG nextflow.config.ConfigBuilder - Setting config profile: 'standard'
+Aug-17 12:54:40.369 [main] DEBUG nextflow.Session - Session uuid: 4b14c518-26cb-4322-addb-0dbedf1035c6
+Aug-17 12:54:40.372 [main] DEBUG nextflow.Session - Executor pool size: 128
+Aug-17 12:54:40.407 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.20.1 build 3862
+  Modified: 05-07-2016 13:03 UTC (09:03 EDT)
+  System: Linux 2.6.32-642.3.1.el6.x86_64
+  Runtime: Groovy 2.4.7 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_11-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 30860@helix.nih.gov [128.231.2.3]
+
+Aug-17 12:54:40.432 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/bin
+Aug-17 12:54:40.436 [main] DEBUG nextflow.Session - Session start invoked
+Aug-17 12:54:40.443 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Aug-17 12:54:40.444 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Aug-17 12:54:41.955 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-17 12:54:41.977 [main] INFO  nextflow.Nextflow - R N A T O Y   P I P E L I N E    
+Aug-17 12:54:41.980 [main] INFO  nextflow.Nextflow - =================================
+Aug-17 12:54:41.981 [main] INFO  nextflow.Nextflow - genome             : /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/data/ggal/ggal_1_48850000_49020000.Ggal71.500bpflank.fa
+Aug-17 12:54:41.981 [main] INFO  nextflow.Nextflow - annotat            : /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/data/ggal/ggal_1_48850000_49020000.bed.gff
+Aug-17 12:54:41.981 [main] INFO  nextflow.Nextflow - reads              : /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/data/ggal/*_{1,2}.fq
+Aug-17 12:54:42.008 [main] DEBUG nextflow.Channel - files for syntax: glob; folder: /home/kimb8/.nextflow/assets/nextflow-io/rnatoy/data/ggal/; pattern: *_{1,2}.fq; options: null
+Aug-17 12:54:42.781 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Aug-17 12:54:42.781 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Aug-17 12:54:42.800 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Aug-17 12:54:42.804 [main] INFO  nextflow.executor.Executor - [warm up] executor > slurm
+Aug-17 12:54:42.823 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 1s; dumpInterval: 5m 
+Aug-17 12:54:42.850 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+Aug-17 12:54:42.860 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Aug-17 12:54:42.868 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: slurm
+Aug-17 12:54:42.872 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Aug-17 12:54:42.955 [main] DEBUG nextflow.Session - >>> barrier register (process: buildIndex)
+Aug-17 12:54:42.987 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > buildIndex -- maxForks: 128
+Aug-17 12:54:43.102 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Aug-17 12:54:43.102 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Aug-17 12:54:43.105 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Aug-17 12:54:43.106 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Aug-17 12:54:43.108 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+Aug-17 12:54:43.148 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > mapping -- maxForks: 128
+Aug-17 12:54:43.167 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Aug-17 12:54:43.167 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Aug-17 12:54:43.167 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Aug-17 12:54:43.168 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Aug-17 12:54:43.169 [main] DEBUG nextflow.Session - >>> barrier register (process: makeTranscript)
+Aug-17 12:54:43.190 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > makeTranscript -- maxForks: 128
+Aug-17 12:54:43.195 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-17 12:54:43.196 [main] DEBUG nextflow.Session - Session await
+Aug-17 12:54:43.346 [Actor Thread 2] DEBUG nextflow.executor.GridTaskHandler - Launching process > buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank) -- work folder: /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/work/98/a3efc5666bf00dfb4a0f638e2fd637
+Aug-17 12:54:58.395 [Actor Thread 2] ERROR nextflow.processor.TaskProcessor - Error executing process > 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)'
+
+Caused by:
+  Cannot run program "sbatch" (in directory "/gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/work/98/a3efc5666bf00dfb4a0f638e2fd637"): error=2, No such file or directory
+
+Command executed:
+
+  sbatch .command.run
+
+Command exit status:
+  0
+
+Command output:
+  (empty)
+
+Work dir:
+  /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/work/98/a3efc5666bf00dfb4a0f638e2fd637
+
+Tip: view the complete command output by changing to the process work dir and entering the command: 'cat .command.out'
+nextflow.exception.ProcessFailedException: Error submitting process 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)' for execution
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:255)
+	at nextflow.executor.GridTaskHandler.submit(GridTaskHandler.groovy:155)
+	at nextflow.processor.TaskPollingMonitor.submit(TaskPollingMonitor.groovy:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1215)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:923)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:906)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:74)
+	at nextflow.processor.TaskPollingMonitor$_schedule_closure3.doCall(TaskPollingMonitor.groovy:258)
+	at nextflow.processor.TaskPollingMonitor$_schedule_closure3.call(TaskPollingMonitor.groovy)
+	at nextflow.extension.Bolts.withLock(Bolts.groovy:304)
+	at nextflow.processor.TaskPollingMonitor.schedule(TaskPollingMonitor.groovy:252)
+	at nextflow.processor.TaskMonitor$schedule$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at nextflow.processor.TaskDispatcher.submit(TaskDispatcher.groovy:154)
+	at nextflow.processor.TaskDispatcher$submit$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at nextflow.processor.TaskProcessor.submitTask(TaskProcessor.groovy:1629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at nextflow.processor.TaskProcessor.checkCachedOrLaunchTask(TaskProcessor.groovy:522)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+	at nextflow.processor.ParallelTaskProcessor.invokeTask(ParallelTaskProcessor.groovy:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1215)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1261)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:46)
+	at groovy.lang.Script.invokeMethod(Script.java:80)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:430)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:369)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:69)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at Script268F736790F82E694C1041E30D0FE6DF$_run_closure1.doCall(Script268F736790F82E694C1041E30D0FE6DF:1)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.ForkingDataflowOperatorActor.access$001(ForkingDataflowOperatorActor.java:35)
+	at groovyx.gpars.dataflow.operator.ForkingDataflowOperatorActor$1.run(ForkingDataflowOperatorActor.java:58)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Cannot run program "sbatch" (in directory "/gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/work/98/a3efc5666bf00dfb4a0f638e2fd637"): error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at java_lang_ProcessBuilder$start$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+	at nextflow.executor.GridTaskHandler.submit(GridTaskHandler.groovy:119)
+	... 84 common frames omitted
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:187)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 89 common frames omitted
+Aug-17 12:54:58.423 [Actor Thread 2] DEBUG nextflow.Session - Session aborted -- Cause: nextflow.exception.ProcessFailedException: Error submitting process 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)' for execution
+Aug-17 12:54:58.427 [Thread-5] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm)
+Aug-17 12:54:58.439 [main] DEBUG nextflow.Session - Session await > processes completed
+Aug-17 12:54:58.439 [main] DEBUG nextflow.Session - Session await > done
+Aug-17 12:54:58.452 [Actor Thread 6] DEBUG n.processor.ParallelTaskProcessor - <makeTranscript> After stop
+Aug-17 12:54:58.453 [Actor Thread 5] DEBUG n.processor.ParallelTaskProcessor - <mapping> After stop
+Aug-17 12:54:58.453 [Actor Thread 4] DEBUG n.processor.ParallelTaskProcessor - <buildIndex> After stop
+Aug-17 12:54:58.487 [main] DEBUG nextflow.Session - Session destroyed

@@ -1,0 +1,115 @@
+Aug-17 12:57:47.794 [main] DEBUG nextflow.cli.Launcher - $> /home/kimb8/projects/bin/nextflow run rnatoy/main.nf
+Aug-17 12:57:48.494 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.20.1
+Aug-17 12:57:48.495 [main] INFO  nextflow.cli.CmdRun - Launching rnatoy/main.nf
+Aug-17 12:57:48.519 [main] DEBUG nextflow.config.ConfigBuilder - Found config home: /home/kimb8/.nextflow/config
+Aug-17 12:57:48.528 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/nextflow.config
+Aug-17 12:57:48.534 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kimb8/.nextflow/config
+Aug-17 12:57:48.534 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/nextflow.config
+Aug-17 12:57:51.559 [main] DEBUG nextflow.config.ConfigBuilder - Setting config profile: 'standard'
+Aug-17 12:57:55.536 [main] DEBUG nextflow.Session - Session uuid: ed138be3-aba4-415e-9147-a27e5ec93bba
+Aug-17 12:57:55.541 [main] DEBUG nextflow.Session - Executor pool size: 128
+Aug-17 12:57:55.614 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.20.1 build 3862
+  Modified: 05-07-2016 13:03 UTC (09:03 EDT)
+  System: Linux 2.6.32-642.3.1.el6.x86_64
+  Runtime: Groovy 2.4.7 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_11-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 32708@helix.nih.gov [128.231.2.3]
+
+Aug-17 12:57:55.635 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/bin
+Aug-17 12:57:55.635 [main] DEBUG nextflow.Session - Session start invoked
+Aug-17 12:57:55.640 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Aug-17 12:57:55.642 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Aug-17 12:58:00.894 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-17 12:58:00.917 [main] INFO  nextflow.Nextflow - R N A T O Y   P I P E L I N E    
+Aug-17 12:58:00.918 [main] INFO  nextflow.Nextflow - =================================
+Aug-17 12:58:00.919 [main] INFO  nextflow.Nextflow - genome             : /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/data/ggal/ggal_1_48850000_49020000.Ggal71.500bpflank.fa
+Aug-17 12:58:00.919 [main] INFO  nextflow.Nextflow - annotat            : /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/data/ggal/ggal_1_48850000_49020000.bed.gff
+Aug-17 12:58:00.919 [main] INFO  nextflow.Nextflow - reads              : /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/data/ggal/*_{1,2}.fq
+Aug-17 12:58:00.950 [main] DEBUG nextflow.Channel - files for syntax: glob; folder: /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/rnatoy/data/ggal/; pattern: *_{1,2}.fq; options: null
+Aug-17 12:58:01.558 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: local
+Aug-17 12:58:01.559 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Aug-17 12:58:06.817 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Aug-17 12:58:06.822 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Aug-17 12:58:06.838 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus: 128; memory: 1,009.7 GB; pollInterval: 100ms; dumpInterval: 5m
+Aug-17 12:58:06.847 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Aug-17 12:58:06.848 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-17 12:58:06.854 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Aug-17 12:58:06.943 [main] DEBUG nextflow.Session - >>> barrier register (process: buildIndex)
+Aug-17 12:58:06.995 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > buildIndex -- maxForks: 128
+Aug-17 12:58:07.161 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: local
+Aug-17 12:58:07.161 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Aug-17 12:58:07.162 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Aug-17 12:58:07.165 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+Aug-17 12:58:07.203 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > mapping -- maxForks: 128
+Aug-17 12:58:07.221 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: local
+Aug-17 12:58:07.222 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Aug-17 12:58:07.222 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Aug-17 12:58:07.225 [main] DEBUG nextflow.Session - >>> barrier register (process: makeTranscript)
+Aug-17 12:58:07.250 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > makeTranscript -- maxForks: 128
+Aug-17 12:58:07.257 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-17 12:58:07.257 [main] DEBUG nextflow.Session - Session await
+Aug-17 12:58:07.551 [Actor Thread 3] INFO  nextflow.Session - [04/033655] Submitted process > buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)
+Aug-17 12:58:08.054 [Thread-3] ERROR nextflow.processor.TaskProcessor - Error executing process > 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)'
+
+Caused by:
+  Process 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)' terminated with an error exit status
+
+Command executed:
+
+  bowtie2-build --threads 1 ggal_1_48850000_49020000.Ggal71.500bpflank.fa genome.index
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  /usr/local/lmod/lmod/lmod/init/bash: line 96: PS1: unbound variable
+  .command.sh: line 2: bowtie2-build: command not found
+
+Work dir:
+  /gpfs/gsfs4/users/CCBR/user/kimb8/ChIP-Seq-pipeline/example/work/04/03365567f5246c947cfdca2dfe9344
+
+Tip: view the complete command output by changing to the process work dir and entering the command: 'cat .command.out'
+nextflow.exception.ProcessFailedException: Process 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)' terminated with an error exit status
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at nextflow.processor.TaskProcessor.finalizeTask(TaskProcessor.groovy:1669)
+	at nextflow.processor.TaskPollingMonitor.checkTaskStatus(TaskPollingMonitor.groovy:438)
+	at nextflow.processor.TaskPollingMonitor.checkAllTasks(TaskPollingMonitor.groovy:394)
+	at nextflow.processor.TaskPollingMonitor.pollLoop(TaskPollingMonitor.groovy:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1215)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:923)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:906)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:74)
+	at nextflow.processor.TaskPollingMonitor$_start_closure6.doCall(TaskPollingMonitor.groovy:319)
+	at nextflow.processor.TaskPollingMonitor$_start_closure6.call(TaskPollingMonitor.groovy)
+	at groovy.lang.Closure.run(Closure.java:495)
+	at java.lang.Thread.run(Thread.java:745)
+Aug-17 12:58:08.075 [Thread-3] DEBUG nextflow.Session - Session aborted -- Cause: nextflow.exception.ProcessFailedException: Process 'buildIndex (ggal_1_48850000_49020000.Ggal71.500bpflank)' terminated with an error exit status
+Aug-17 12:58:08.077 [Actor Thread 2] DEBUG nextflow.processor.TaskProcessor - <buildIndex> Sending poison pills and terminating process
+Aug-17 12:58:20.294 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: buildIndex)
+Aug-17 12:58:20.303 [Thread-3] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Aug-17 12:58:20.298 [main] DEBUG nextflow.Session - Session await > processes completed
+Aug-17 12:58:20.310 [Actor Thread 5] DEBUG n.processor.ParallelTaskProcessor - <mapping> After stop
+Aug-17 12:58:20.311 [Actor Thread 4] DEBUG n.processor.ParallelTaskProcessor - <buildIndex> After stop
+Aug-17 12:58:20.311 [Actor Thread 6] DEBUG n.processor.ParallelTaskProcessor - <makeTranscript> After stop
+Aug-17 12:58:20.313 [main] DEBUG nextflow.Session - Session await > done
+Aug-17 12:58:20.350 [main] DEBUG nextflow.Session - Session destroyed
