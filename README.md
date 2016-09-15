@@ -17,7 +17,11 @@ git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
 ##How to run the pipeline
 
 ```bash
-./nextflow run ChIP-Seq-Pipeline/main.nf --macsconfig='examples/macs.config' --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
+./nextflow run ChIP-Seq-Pipeline/main.nf \
+	-config ChIP-Seq-Pipeline/config \
+	--macsconfig='examples/macs.config' \
+	--reads='ChIP-Seq-Pipeline/examples/*.fastq' \
+	--genome='hg19'
 ```
 	
 * Note that the reads names are supposed to end with ".fastq" or ".fq" or "*.fastq.gz".
