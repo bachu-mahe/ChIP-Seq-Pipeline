@@ -16,11 +16,10 @@
 	./nextflow run ChIP-Seq-Pipeline/main.nf --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
 	
 ###Additional options can be used: 
-* -resume
-* -profile 'local' for 
-* -with-timeline 'timeline.html'
-* -with-dag 'flowchart.dag'
-
+* -resume                         --> to resume the previous failed run
+* -profile 'local'                --> for running tools "locally" not thourgh high performance computer queueing mechanisms.
+* -with-timeline 'timeline.html'  --> record the run time of each process.
+* -with-dag 'flowchart.png'       --> draw the flowchart
 
 We implemented the pipeline using Nextflow.
 
