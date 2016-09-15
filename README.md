@@ -3,25 +3,29 @@
 ##Installation
 
 1. install nextflow
-	Visit https://www.nextflow.io/
+	curl -fsSL get.nextflow.io | bash
+
+	For details, visit https://www.nextflow.io/
 
 2. clone this git repository
+	git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
 
 
-##Runing the pipeline
-	nextflow run ChIP-Seq-Pipeline/main.nf --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
+##How to run the pipeline
+	./nextflow run ChIP-Seq-Pipeline/main.nf --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
 	
    the following additional options can be used 
         -resume
-        -profile 'local'
+        -profile 'local' for 
         -with-timeline 'timeline.html'
 	-with-dag 'flowchart.dag'
 
 
-We implemented this pipeline using Nextflow.
+We implemented the pipeline using Nextflow.
 
 
 ## Current implementation includes following tools.
+Thanks to the authors of the tools!
 
 1. Trimgalor
 2. BWA mem
