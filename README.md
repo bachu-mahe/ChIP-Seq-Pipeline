@@ -1,6 +1,6 @@
 # CCBR ChIP-Seq Pipeline
 
-#Installation
+##Installation
 
 1. install nextflow
 	Visit https://www.nextflow.io/
@@ -8,7 +8,7 @@
 2. clone this git repository
 
 
-#Runing the pipeline
+##Runing the pipeline
 	nextflow run ChIP-Seq-Pipeline/main.nf --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
 	
    the following additional options can be used 
@@ -21,7 +21,7 @@
 We implemented this pipeline using Nextflow.
 
 
-# Current implementation includes following tools.
+## Current implementation includes following tools.
 
 1. Trimgalor
 2. BWA mem
@@ -34,12 +34,12 @@ We implemented this pipeline using Nextflow.
 9. PhantomPeakqualTool
 
 
-#Todo list
+##Todo list
 
 1. ChipSeeker
 2. Homer
 3. PeakDiff
 
-#Thanks
+##Thanks
 I got many nice implementation ideas from Nextflow examples, especially from NGI-ChIP-seq pipeline.
 Many thanks to the NGI pipeline developers and our CCBR team mebers.
