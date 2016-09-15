@@ -15,6 +15,13 @@
 ##How to run the pipeline
 	./nextflow run ChIP-Seq-Pipeline/main.nf --macsconfig='examples/macs.config' --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
 	
+* Note that the reads names are supposed to end with ".fastq" or ".fq" or "*.fastq.gz".
+If you experience an error message related to missing file(s), this might be the reason.
+
+* Config file is designed to work at our NIH biowulf2 HPC. If you plan to use on helix, add -profile 'local' option at the end of command line arguments. If you plan to use outside NIH, you need to edit the "genome" section according to your paths information.
+
+
+
 ###Additional options can be used: 
 * -resume                         --> to resume the previous failed run
 * -profile 'local'                --> for running tools "locally" not thourgh high performance computer queueing mechanisms.
