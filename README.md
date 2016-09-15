@@ -36,6 +36,7 @@ Thanks to the authors of the tools!
 7. Sicer
 8. MEME-ChIP
 9. PhantomPeakqualTool
+10. CEAS
 
 
 ##Todo list
