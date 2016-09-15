@@ -1,20 +1,25 @@
 # CCBR ChIP-Seq Pipeline
 
+
 ##Installation
 
 1. install nextflow
-	
+	```bash
 	curl -fsSL get.nextflow.io | bash
+	```
 
 	For details, visit https://www.nextflow.io/
 
 2. clone this git repository
-
+	```bash
 	git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
-
+	```
 
 ##How to run the pipeline
+
+	```bash
 	./nextflow run ChIP-Seq-Pipeline/main.nf --macsconfig='examples/macs.config' --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
+	```
 	
 * Note that the reads names are supposed to end with ".fastq" or ".fq" or "*.fastq.gz".
 If you experience an error message related to missing file(s), this might be the reason.
