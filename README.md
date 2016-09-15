@@ -15,11 +15,11 @@
 ##How to run the pipeline
 	./nextflow run ChIP-Seq-Pipeline/main.nf --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
 	
-Additional options can be used 
-	-resume
-        -profile 'local' for 
-        -with-timeline 'timeline.html'
-	-with-dag 'flowchart.dag'
+Additional options can be used: 
+	* -resume
+        * -profile 'local' for 
+        * -with-timeline 'timeline.html'
+	* -with-dag 'flowchart.dag'
 
 
 We implemented the pipeline using Nextflow.
