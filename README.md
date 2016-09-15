@@ -8,6 +8,7 @@
 	For details, visit https://www.nextflow.io/
 
 2. clone this git repository
+
 	git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
 
 
