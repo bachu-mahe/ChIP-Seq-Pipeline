@@ -4,15 +4,15 @@
 ##Installation
 
 1. install nextflow
-```bash
-curl -fsSL get.nextflow.io | bash
-```
+	```bash
+	curl -fsSL get.nextflow.io | bash
+	```
 	For details, visit https://www.nextflow.io/
 
 2. clone this git repository
-```bash
-git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
-```
+	```bash
+	git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
+	```
 
 ##How to run the pipeline
 
