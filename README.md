@@ -19,3 +19,6 @@ Todo list
 1. ChipSeeker
 2. Homer
 3. PeakDiff
+
+I got many nice implementation ideas from Nextflow examples, especially from NGI-ChIP-seq pipeline.
+Many thanks to the NGI pipeline developers.
