@@ -43,7 +43,7 @@ If you experience an error message related to missing file(s), this might be the
 We implemented the pipeline using Nextflow.
 
 
-## Currently implemented tools
+## Implemented tools
 Thanks to the authors of the tools!
 
 1. Trimgalor
@@ -57,22 +57,23 @@ Thanks to the authors of the tools!
 9. PhantomPeakqualTool
 10. CEAS
 
-
+ 
+ 
 ### Todo list
 
 1. ChipSeeker
 2. Homer
 3. PeakDiff
 4. ngsplot
-
-
-
+ 
+ 
+ 
 ### Thanks
 
 I got many nice implementation ideas from Nextflow examples, especially from NGI-ChIP-seq pipeline.
 Many thanks to the NGI pipeline developers and our CCBR team mebers.
-
-
+ 
+ 
 #### Questions or Suggestions
 
 Email to Bong-Hyun.Kim at NIH dot GOV.
