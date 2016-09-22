@@ -1,30 +1,49 @@
 # CCBR ChIP-Seq Pipeline
 
-##Installation
+
+## Installation
 
 1. install nextflow
+	```bash
 	curl -fsSL get.nextflow.io | bash
-
+	```
 	For details, visit https://www.nextflow.io/
 
 2. clone this git repository
-
+	```bash
 	git clone https://github.com/CCBR/ChIP-Seq-Pipeline.git
+	```
 
+## How to run the pipeline
 
-##How to run the pipeline
-	./nextflow run ChIP-Seq-Pipeline/main.nf --reads='ChIP-Seq-Pipeline/examples/*.fastq' -config ChIP-Seq-Pipeline/config --genome='hg19'
+```bash
+./nextflow run ChIP-Seq-Pipeline/main.nf \
+	-config ChIP-Seq-Pipeline/config \
+	--macsconfig='examples/macs.config' \
+	--reads='ChIP-Seq-Pipeline/examples/*.fastq' \
+	--genome='hg19'
+```
 	
-###Additional options can be used: 
-* -resume                         --> to resume the previous failed run
-* -profile 'local'                --> for running tools "locally" not thourgh high performance computer queueing mechanisms.
-* -with-timeline 'timeline.html'  --> record the run time of each process.
-* -with-dag 'flowchart.png'       --> draw the flowchart
+* Note that the reads names are supposed to end with *".fastq"* or *".fastq.gz"*.
+If you experience an error message related to missing file(s), this might be the reason.
+
+* Config file is designed to work at our NIH biowulf2 HPC. If you plan to use on helix, add -profile 'local' option at the end of command line arguments. If you plan to use outside NIH, you need to edit the "genome" section according to your paths information.
+
+* macs.config is a config file for MACS2 to find peaks. ChIP sample and control (input or IgG) with their label concatenated by comma form a line, e.g. `chip_sample_id,control_id,sample_name`. `chip_sample_id` or `control_id` are the basename of the FASTQ files wihtout the trailing *".fastq"* or *".fastq.gz"*.
+
+* Currently, the pipeline fully supports hg19, mm10 and partially supports GRCh38 and GRCm38. Contact us for other genomes. 
+
+
+#### Additional options: 
+* `-resume`                         --> to resume the previous failed run
+* `-profile 'local'`                --> for running tools "locally" not thourgh high performance computer queueing mechanisms.
+* `-with-timeline 'timeline.html'`  --> record the run time of each process.
+* `-with-dag 'flowchart.png'`       --> draw the flowchart
 
 We implemented the pipeline using Nextflow.
 
 
-## Current implementation includes following tools.
+## Implemented tools
 Thanks to the authors of the tools!
 
 1. Trimgalor
@@ -38,18 +57,24 @@ Thanks to the authors of the tools!
 9. PhantomPeakqualTool
 10. CEAS
 
-
-##Todo list
+ 
+ 
+### Todo list
 
 1. ChipSeeker
 2. Homer
 3. PeakDiff
+4. ngsplot
+ 
+ 
+ 
+### Thanks
 
-##Thanks
 I got many nice implementation ideas from Nextflow examples, especially from NGI-ChIP-seq pipeline.
 Many thanks to the NGI pipeline developers and our CCBR team mebers.
+ 
+ 
+#### Questions or Suggestions
 
-
-###Questions or Suggestions
 Email to Bong-Hyun.Kim at NIH dot GOV.
 

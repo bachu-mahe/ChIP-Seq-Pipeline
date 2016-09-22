@@ -38,7 +38,7 @@ genome_fasta = file( params.fasta )
 macsconfig = file( params.macsconfig )
 
 if ( !index.exists() ) exit 1, "Missing BWA Index file: $index"
-if ( !geome_fasta.exists() ) exit 1, "Missing Whole Genome FASTA file: $genome_fasta"
+if ( !genome_fasta.exists() ) exit 1, "Missing Whole Genome FASTA file: $genome_fasta"
 if ( !macsconfig.exists() ) exit 1, "Missing macs config file: $macsconfig"
 
 (macs_in, sicer_in) = Channel 
