@@ -30,7 +30,7 @@ params.reads = "example/*.fastq"
 params.macsconfig = 'example/macssetup.config'
 params.expected_fragment_size = 300
 params.outdir = "./ChIP-Seq-Pipeline-Output/"
-params.publish_mode = "symlink" //"copy"
+params.publish_mode = "copy" //"symlink" //"copy"
 
 //Basic Parameter Checking
 index = file( params.index )
