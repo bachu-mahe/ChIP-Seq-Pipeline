@@ -39,6 +39,7 @@ If you experience an error message related to missing file(s), this might be the
 * `-profile 'local'`                --> for running tools "locally" not thourgh high performance computer queueing mechanisms.
 * `-with-timeline 'timeline.html'`  --> record the run time of each process.
 * `-with-dag 'flowchart.png'`       --> draw the flowchart
+* `--outdir 'ChIP-Seq-Pipeline-Output'`       --> specify the directory to save directory from the default output
 
 We implemented the pipeline using Nextflow.
 
