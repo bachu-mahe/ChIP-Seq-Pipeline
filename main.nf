@@ -118,7 +118,7 @@ process bwa {
 
 	cpus 8
 	memory 32.GB
-	time 4.h
+	time 8.h
 
 	publishDir "${params.outdir}/bwa", mode: params.publishMode
 
