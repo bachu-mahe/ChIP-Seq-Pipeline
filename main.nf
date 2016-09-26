@@ -273,11 +273,8 @@ process macs {
     module 'ceas'
 
     cpus 2
-    memory { 16.GB * task.attempt }
-    time { 24.h * task.attempt }
-    //errorStrategy { task.exitStatus == 143 ? 'retry' : 'ignore' }
-    maxRetries 3
-    maxErrors '-1'
+    memory 16.GB
+    time 8.h
 
     publishDir "${params.outdir}/macs", mode: params.publish_mode
 
@@ -300,10 +297,10 @@ process macs {
 
     if (ctrl_sample_id == '') {
         ctrl = '' 
-        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${chip_sample_id}_peaks.narrowPeak"
+        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak"
     } else {
         ctrl = "-c ${ctrl_sample_id}.mkdp.bam"
-        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${chip_sample_id}_peaks.narrowPeak -w ${ctrl_sample_id}_control_lambda.bdg"
+        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak -w ${analysis_id}_control_lambda.bdg"
     }
     """
     macs2 callpeak \\
