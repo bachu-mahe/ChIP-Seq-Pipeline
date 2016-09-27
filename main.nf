@@ -310,7 +310,7 @@ process macs {
         -g $REF \\
         -n $analysis_id \\
         -q 0.01 \\
-        -B --SPMR 
+        -B
     $ceas
     """
 }
