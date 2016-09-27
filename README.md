@@ -72,7 +72,7 @@ Thanks to the authors of the tools!
 ### Thanks
 
 I got many nice implementation ideas from Nextflow examples, especially from NGI-ChIP-seq pipeline.
-Many thanks to the NGI pipeline developers and our CCBR team mebers.
+Many thanks to the NGI pipeline developers and Alexei, Ashley, George, Parthav and other CCBR team mebers.
  
  
 #### Questions or Suggestions
