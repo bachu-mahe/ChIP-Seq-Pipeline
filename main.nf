@@ -300,7 +300,8 @@ process macs {
         ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak"
     } else {
         ctrl = "-c ${ctrl_sample_id}.mkdp.bam"
-        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak -w ${analysis_id}_control_lambda.bdg"
+        //ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak -w ${analysis_id}_control_lambda.bdg"
+	ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak"
     }
     """
     macs2 callpeak \\
@@ -310,7 +311,7 @@ process macs {
         -g $REF \\
         -n $analysis_id \\
         -q 0.01 \\
-        -B
+        -B --SPMR
     $ceas
     """
 }
