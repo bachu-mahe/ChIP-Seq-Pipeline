@@ -14,7 +14,7 @@ profiles {
 	  executor = 'slurm'
 	  cpus = 4
 	  memory = '16 GB'
-	  time = '2h'
+	  time = '24h'
 	  queue = "ccr"
 	}
     }
