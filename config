@@ -1,9 +1,9 @@
 /* -------------------------------------------------
- *  Example Nextflow config file for UPPMAX (milou)
+ *  Example Nextflow config file
  * -------------------------------------------------
  * Defines reference genomes, using iGenome paths
- * Should be saved either with Nextflow installation or
- * as file ~/.nextflow/config
+ * standard for "biowulf2"
+ * local for "helix" or any other multicore system
  */
 
 
@@ -14,21 +14,16 @@ profiles {
 	  executor = 'slurm'
 	  cpus = 4
 	  memory = '16 GB'
-	  time = '2h'
+	  time = '24h'
 	  queue = "ccr"
 	}
     }
 
     local {
         process.executor = 'local'
-        process.queueSize = 5
+        process.queueSize = 4
+        process.cpus = 4
         process.pollInterval = '1sec'
-    }
-
-    cloud {
-        process.executor = 'cirrus'
-        process.container = 'cbcrg/imagex'
-        docker.enabled = true
     }
 
 }

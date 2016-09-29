@@ -30,7 +30,7 @@ params.reads = "example/*.fastq"
 params.macsconfig = 'example/macssetup.config'
 params.expected_fragment_size = 300
 params.outdir = "./ChIP-Seq-Pipeline-Output/"
-params.publish_mode = "symlink" //"copy"
+params.publish_mode = "copy" //"symlink" //"copy"
 
 //Basic Parameter Checking
 index = file( params.index )
@@ -118,7 +118,7 @@ process bwa {
 
 	cpus 8
 	memory 32.GB
-	time 4.h
+	time 8.h
 
 	publishDir "${params.outdir}/bwa", mode: params.publishMode
 
@@ -273,11 +273,8 @@ process macs {
     module 'ceas'
 
     cpus 2
-    memory { 16.GB * task.attempt }
-    time { 24.h * task.attempt }
-    //errorStrategy { task.exitStatus == 143 ? 'retry' : 'ignore' }
-    maxRetries 3
-    maxErrors '-1'
+    memory 16.GB
+    time 8.h
 
     publishDir "${params.outdir}/macs", mode: params.publish_mode
 
@@ -300,10 +297,11 @@ process macs {
 
     if (ctrl_sample_id == '') {
         ctrl = '' 
-        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${chip_sample_id}_peaks.narrowPeak"
+        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak"
     } else {
         ctrl = "-c ${ctrl_sample_id}.mkdp.bam"
-        ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${chip_sample_id}_peaks.narrowPeak -w ${ctrl_sample_id}_control_lambda.bdg"
+        //ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak -w ${analysis_id}_control_lambda.bdg"
+	ceas = "ceas -g /fdb/CEAS/${params.genome}.refGene -b ${analysis_id}_peaks.narrowPeak"
     }
     """
     macs2 callpeak \\
@@ -313,7 +311,7 @@ process macs {
         -g $REF \\
         -n $analysis_id \\
         -q 0.01 \\
-        -B --SPMR 
+        -B --SPMR
     $ceas
     """
 }
